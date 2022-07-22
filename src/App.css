@@ -1,38 +1,134 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eee;
   text-align: center;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.block-title {
+  color: #051c33;
+  font-family: "Lobster", "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-size: 4em;
+  font-weight: bold;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+/* form start here */
+
+.search-form {
+  max-width: 460px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 0 auto 32px;
+}
+
+.search-form input {
+  font-size: 1em;
+  width: 100%;
+  background-color: #edeff0;
+  padding: 10px 15px;
+  border: 3px solid #d7dbdf;
+  border-right: none;
+  border-radius: 0.35em 0 0 0.35em;
+  outline: none;
+}
+
+.search-form input::placeholder {
+  color: #fff;
+}
+
+.search-button {
+  outline: none;
+  border: none;
+  padding: 0 15px;
+  border-radius: 0 0.35em 0.35em 0;
+  cursor: pointer;
+}
+
+.search-button:disabled {
+  border-color: -internal-light-dark(
+    rgba(118, 118, 118, 0.3),
+    rgba(195, 195, 195, 0.3)
+  );
+  color: -internal-light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
+  border-color: -internal-light-dark(
+    rgba(118, 118, 118, 0.3),
+    rgba(195, 195, 195, 0.3)
+  );
+}
+
+.search-button i {
+  font-size: 28px;
+  color: #fff;
+}
+
+/* nav start here */
+
+.main-nav ul {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-nav ul li {
+  margin: 10px;
+  width: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.nav-btn {
+  display: block;
+  background: #051c33;
+  border-radius: 3px;
+  padding: 5px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.active {
+  background: orange;
+}
+
+/* wrapper start here */
+
+.section-title {
+  color: #051c33;
+  font-size: 2em;
+  margin: 52px 0 40px;
+}
+
+.photo-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.main-nav-list {
+  width: 220px;
+  height: 165px;
+  overflow: hidden;
+  margin-bottom: 15px;
 }
