@@ -109,6 +109,8 @@ a {
 
 .active {
   background: orange;
+  background-color: #fff;
+  color:#051c33;
 }
 
 /* wrapper start here */
@@ -131,4 +133,13 @@ a {
   height: 165px;
   overflow: hidden;
   margin-bottom: 15px;
+  transition: .3s;
+}
+
+.main-nav-list img {
+  transition: .3s;
+}
+
+.main-nav-list:hover img {
+  transform: scale(1.1);
 }

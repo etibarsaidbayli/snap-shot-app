@@ -7,13 +7,12 @@ function App() {
   const [items, setItems] = useState([]);
   const [tag, setTag] = useState("");
 
-
   useEffect(() => {
     const getData = async () => {
       let data = await fetch(
         "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=636e1481b4f3c446d26b8eb6ebfe7127&tags=mountain&per_page=24&format=json&nojsoncallback=1"
       ).then((response) => response.json());
-    
+
       setItems(data.photos.photo);
     };
     getData();
@@ -24,7 +23,7 @@ function App() {
       let data = await fetch(
         `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=636e1481b4f3c446d26b8eb6ebfe7127&tags=${tag}&per_page=24&format=json&nojsoncallback=1`
       ).then((response) => response.json());
-     
+
       setItems(data.photos.photo);
     };
     getData();
@@ -45,10 +44,10 @@ function App() {
         <div className="block">
           <h1 className="block-title">Snapshot</h1>
           <Form tag={tag} setTag={setTag} />
-          <Nav items={items} handleTagClick={handleTagClick} />
+          <Nav items={items} handleTagClick={handleTagClick} tag={tag} />
         </div>
         <div>
-          <h2 className="section-title">{tag} Pictures</h2>
+          <h2 className="section-title">{tag} pictures</h2>
           <div className="photo-container">
             <div>
               <ul>

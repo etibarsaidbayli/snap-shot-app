@@ -1,6 +1,6 @@
 import React from "react";
 
-function ListPhoto({farm,server,secret,id}) {
+function ListPhoto({ farm, server, secret, id }) {
   return (
     <li className="main-nav-list">
       <img

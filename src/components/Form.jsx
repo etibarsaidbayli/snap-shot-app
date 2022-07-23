@@ -6,7 +6,8 @@ function Form({ tag, setTag }) {
 
   const submitForm = (event) => {
     event.preventDefault();
-    setTag(inputText)
+    setTag(inputText);
+    setInputText("");
   };
 
   return (
